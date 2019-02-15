@@ -1,0 +1,23 @@
+{
+  "name": "leaderboard-rest-api",
+  "version": "1.0.0",
+  "description": "A RESTful API to insert player scores into a local MySQL database to view them on a leaderboard.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "api",
+    "restful",
+    "api",
+    "mysql",
+    "database",
+    "leaderboard",
+    "score",
+    "game"
+  ],
+  "author": "Kadlez",
+  "license": "SEE LICENSE IN LICENSE"
+}
