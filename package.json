@@ -1,10 +1,14 @@
 {
   "name": "leaderboard-rest-api",
-  "version": "1.0.21",
+  "version": "1.0.23",
   "description": "A simple RESTful API to insert player scores into a local MySQL database.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kadlez/leaderboard-rest-api.git"
   },
   "keywords": [
     "api",
@@ -19,5 +23,8 @@
     "game"
   ],
   "author": "Kadlez",
-  "license": "SEE LICENSE IN LICENSE"
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/Kadlez/leaderboard-rest-api/issues"
+  }
 }
