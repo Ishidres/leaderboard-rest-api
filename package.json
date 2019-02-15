@@ -26,5 +26,9 @@
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/Kadlez/leaderboard-rest-api/issues"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
   }
 }
