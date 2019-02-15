@@ -1,0 +1,9 @@
+{
+  "port" : 3000,
+  "archiveDir" : "../archive/",
+  "mysqlHost" : "localhost",
+  "mysqlUsername" : "USERNAME",
+  "mysqlPassword" : "PASSWORD",
+  "mysqlTableName" : "TABLE",
+  "apiToken" : "TOKEN"
+}
