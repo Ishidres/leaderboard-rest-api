@@ -6,6 +6,11 @@ const config = require('../json/config.json');
 const functions = require('./functions.js');
 const debug = functions.debug;
 
+process.on('unhandledRejection', console.error)
+.on('uncaughtException', async function (err) {
+  console.log("uncaughtException:\n" + err.stack);
+  process.exit(0);
+});
 
 const mysqlConnection = mysql.createConnection({
   host: config.mysqlHost,
