@@ -1,7 +1,7 @@
 {
   "name": "leaderboard-rest-api",
-  "version": "1.0.20",
-  "description": "A RESTful API to insert player scores into a local MySQL database to view them on a leaderboard.",
+  "version": "1.0.21",
+  "description": "A simple RESTful API to insert player scores into a local MySQL database to view them on a leaderboard.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
