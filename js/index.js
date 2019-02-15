@@ -28,20 +28,24 @@ app.listen(config.port, () => {
 });
 
 app.get("/ping", (req, res) => {
+  if (functions.tokenCheck(req)[0])
+    return res.json(functions.tokenCheck(req)[1]);
+
   var timestamp = req.query.timestamp;
 
-  if (!timestamp)
+  if (!timestamp || isNaN(timestamp))
     return res.json(functions.errorResponse('invalid_request', 'Must provide a valid timestamp.'));
 
   var ping = new Date().getTime() - timestamp;
-  return res.json(
+  res.json(
     {
       ping: ping,
-      unit: 'ms'
+      unit: 'ms',
+      status: 'success'
     });
 });
 
-app.get("/insert", (req, res) => {
+app.post("/insert", (req, res) => {
   if (functions.tokenCheck(req)[0])
     return res.json(functions.tokenCheck(req)[1]);
 
@@ -54,7 +58,7 @@ app.get("/insert", (req, res) => {
 
   // check for missing parameters and escape provided data
   Object.keys(userInfo).map(function(key) {
-    if (!userInfo[key]) {
+    if (!userInfo[key] && error === false) {
       error = true;
       res.json(functions.errorResponse('invalid_request', "The parameter '" + key + "' is missing or invalid."));
     }
@@ -72,6 +76,11 @@ app.get("/insert", (req, res) => {
       if (err) {
         res.json(functions.errorResponse('unknown_error', "This error might have been caused on server side. Please try again later."));
         throw err;
+      } else {
+        res.json({
+          status: 'success',
+          description: "The given user information has successfully been updated in the database."
+        });
       }
     });
 
