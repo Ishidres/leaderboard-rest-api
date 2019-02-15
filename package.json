@@ -1,6 +1,6 @@
 {
   "name": "leaderboard-rest-api",
-  "version": "1.0.14",
+  "version": "1.0.20",
   "description": "A RESTful API to insert player scores into a local MySQL database to view them on a leaderboard.",
   "main": "index.js",
   "scripts": {
