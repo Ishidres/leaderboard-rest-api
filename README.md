@@ -8,43 +8,43 @@ A simple RESTful API to insert player scores into a local MySQL database, create
 
 ## Authentication
 All API calls require a token. Calls without a token will result into an error. The token must be the same as the apiToken given in config.json.
-#### invalid/missing token response:
+#### Invalid/missing token response:
 ```json
 {"error": "invalid_request", "error_description": "A token is required to access this ressource.", "status": "error"}
 ```
 
 ## GET /ping
 Calculates the response time between the API call and the response.
-#### parameters:
+#### Parameters:
 **timestamp** (int): Timestamp when the call has been done
-#### example request:
+#### Example request:
 ```
 http://localhost:3000/ping?token=TOKEN&timestamp=1550238783279
 ```
-#### successful example response:
+#### Successful example response:
 ```json
 {"ping": 19, "unit": "ms", "status": "success"}
 ```
-#### unsuccessful example response:
+#### Unsuccessful example response:
 ```json
 {"error": "invalid_request", "error_description": "Must provide a valid timestamp.", "status":"error"}
 ```
 
 ## POST /insert
 Inserts or updates a user in the leaderboard.
-#### parameters:
+#### Parameters:
 **id** (int): ID of the user
 **username** (string): The username of the player. Usernames can change between calls, but IDs mustn't.
 **score** (float): The score of the user.
-#### example request:
+#### Example request:
 ```
 http://localhost:3000/insert?token=TOKEN&id=1&username=ishidres&score=50
 ```
-#### successful example response:
+#### Successful example response:
 ```json
 {"status": "success", "description": "The given user information has successfully been updated in the database."}
 ```
-#### unsuccessful example response:
+#### Unsuccessful example response:
 ```json
 {"error": "invalid_request", "error_description": "The parameter 'id' is missing or invalid.", "status": "error"}
 ```
