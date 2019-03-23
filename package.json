@@ -1,6 +1,6 @@
 {
   "name": "leaderboard-rest-api",
-  "version": "1.0.24",
+  "version": "1.2.0",
   "description": "A simple RESTful API to insert player scores into a local MySQL database.",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "express": "^4.16.4",
-    "mysql": "^2.16.0"
+    "mariadb": "^2.0.3"
   }
 }
