@@ -1,9 +1,9 @@
 {
   "port" : 3000,
   "archiveDir" : "../archive/",
-  "mysqlHost" : "localhost",
-  "mysqlUsername" : "USERNAME",
-  "mysqlPassword" : "PASSWORD",
-  "mysqlTableName" : "TABLE",
+  "mariadbHost" : "localhost",
+  "mariadbUsername" : "USERNAME",
+  "mariadbPassword" : "PASSWORD",
+  "mariadbTableName" : "TABLE",
   "apiToken" : "TOKEN"
 }
