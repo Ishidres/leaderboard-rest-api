@@ -1,9 +1,9 @@
 # leaderboard-rest-api
-A simple RESTful API to insert player scores into a local MySQL database, created by a 15 years old student in highschool for a school project.
+A simple RESTful API to insert player scores into a local MariaDB database, created by a 15 years old student in highschool for a school project.
 
 ## Setup
 - change the port in config.json to your likings
-- set the mysql username, password and tablename in config.json
+- set the mariadb username, password and tablename in config.json
 - create and use a strong api token
 
 ## Authentication
