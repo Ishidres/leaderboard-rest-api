@@ -22,7 +22,7 @@ const mariadbConnection = mariadb.createPool({
 mariadbConnection.getConnection().then(() => {
   debug("Connected to mariadb database.", "i", 1);
 }).catch(err => {
-  // throw err;
+  throw err;
 });
 
 function apiResponse (req, res, paths) {
@@ -91,7 +91,7 @@ function apiResponse (req, res, paths) {
     }
   }
 
-  if (paths[3] === 'fetch') {
+  if (paths[2] === 'fetch') {
     if (functions.tokenCheck(req)[0])
       return res.json(functions.tokenCheck(req)[1]);
   
