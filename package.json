@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kadlez/leaderboard-rest-api.git"
+    "url": "git+https://github.com/Ishidres/leaderboard-rest-api.git"
   },
   "keywords": [
     "api",
@@ -22,10 +22,10 @@
     "score",
     "game"
   ],
-  "author": "Kadlez",
+  "author": "Ishidres",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/Kadlez/leaderboard-rest-api/issues"
+    "url": "https://github.com/Ishidres/leaderboard-rest-api/issues"
   },
   "dependencies": {
     "express": "^4.16.4",
