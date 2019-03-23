@@ -51,3 +51,20 @@ http://localhost:3000/insert?token=TOKEN&id=1&username=ishidres&score=50
 ```json
 {"error": "unknown_error", "error_description": "This error might have been caused on server side. Please try again later.", "status": "error"}
 ```
+
+## GET /fetch
+Fetches all users saved in the leaderboard.
+#### Parameters:
+\- none -
+#### Example request:
+```
+http://localhost:3000/fetch?token=TOKEN
+```
+#### Successful example response:
+```json
+{"status": "success", "results": [{ "id": 34, "username": "Ishidres", "score": 100}, { "id": 35, "username": "user2", "score": 20}]}
+```
+#### Unsuccessful example response:
+```json
+{"error": "unknown_error", "error_description": "This error might have been caused on server side. Please try again later.", "status": "error"}
+```
